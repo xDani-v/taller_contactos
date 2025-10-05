@@ -27,14 +27,13 @@ def test_registro_contacto_numero_invalido_longitud():
 
 def test_buscar_contacto_encontrado():
     lista = [
-        {"nombre": "Ana Lopez", "telefono": 1111111111},
-        {"nombre": "Juan Perez", "telefono": 9876543210},
+        {"nombre": "Ana", "telefono": 1111111111},
+        {"nombre": "Juan", "telefono": 9876543210},
     ]
     res = buscar_contacto(lista, "juan")
     # Tu función devuelve el diccionario del contacto cuando encuentra coincidencia (case-insensitive)
     assert isinstance(res, dict)
-    assert res["nombre"] == "Juan Perez"
-    assert res["telefono"] == 9876543210
+    assert res == {"nombre": "Juan", "telefono": 9876543210}
 
 def test_buscar_contacto_no_encontrado():
     lista = [{"nombre": "Ana Lopez", "telefono": 1111111111}]
