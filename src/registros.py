@@ -5,3 +5,5 @@ def registro_contacto(nombre, numero):
         return "Error: El número de teléfono debe tener exactamente 10 dígitos numéricos"
     
     return {"nombre": nombre, "telefono": numero}
+
+
